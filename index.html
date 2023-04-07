@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230406200013">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230407200833">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,64 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-
+				<div class="header__row header__first-row">
+					<button type="button" class="menu__icon icon-menu">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#catalog"></use>
+						</svg>
+					</button>
+					<a href="#" class="header__logo">
+						<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="Логотип"></picture>
+					</a>
+					<form action="#" class="header__search" method="post" data-da=".header__mobile-menu, 768, 0">
+						<input type="text" class="header__input" placeholder="Название модели или артикул" autocomplete="off">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#search"></use>
+						</svg>
+					</form>
+					<a href="tel:+74952210675" class="header__call" data-da=".header__mobile-menu, 768, 3">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#call"></use>
+						</svg>
+						+7 495 221-06-45</a>
+					<button type="button" class="header__callback" data-da=".header__mobile-menu, 768, 4">Заказать звонок</button>
+				</div>
+				<div class="header__row header__mobile-menu">
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item menu__item_catalogy">
+									<a href="#" class="menu__link">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#catalog"></use>
+										</svg>
+										Каталог
+									</a>
+								</li>
+								<li class="menu__item"><a href="#" class="menu__link">О продукте</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Доставка и оплата</a></li>
+								<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__location">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#send"></use>
+						</svg>
+						<span class="header__location-title">Москва</span>
+						<svg>
+							<use xlink:href="img/icons/icons.svg#arrowdown"></use>
+						</svg>
+					</div>
+					<a class="header__cart" href="cart.html" data-da=".header__first-row, 768, 2">
+						<svg>
+							<use xlink:href="img/icons/icons.svg#cart"></use>
+						</svg>
+						<span class="header__cart-title">Моя корзина</span>
+						<span class="header__cart-count">+1</span>
+					</a>
+				</div>
 			</div>
 		</header>
 		<main class="page">
@@ -47,7 +104,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230406200013"></script>
+	<script src="js/app.min.js?_v=20230407200833"></script>
 </body>
 
 </html>
