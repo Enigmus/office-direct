@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-	<title>HomePage</title>
+	<title>Главная страница</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230413225752">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230414201838">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -758,10 +758,7 @@
 				</div>
 			</section>
 
-
-
-
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>v
+			<div id="map" class="map"></div>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -824,7 +821,53 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230413225752"></script>
+	<script src="js/app.min.js?_v=20230414201838"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&_v=20230414201838"></script>
+	<script>
+		ymaps.ready(init);
+
+		function init() {
+			// Создание карты
+			var myMap = new ymaps.Map("map", {
+				//Координаты  центра карты
+				// Порядок по умолчанию: «широта, долгота».
+				// Чтобы не определить координаты центра карты вручную,
+				// Использовать инструмент координат.
+				controls: [],
+				center: [55.670716, 37.611631],
+				// Уровень увеличения.Значения допустимы:
+				// от 0 (весь мир) до 19.
+				zoom: 11
+			});
+
+			let myPlacemark = new ymaps.Placemark([55.611058, 37.495239], {}, {
+				// Параметры.
+				//balloonContentHeader: '',
+				//balloonContentBody: '',
+				//balloonContentFooter: '',
+				//hasBalloon: true,
+				//hideIconOnBalloonOpen: true,
+
+				hasBalloon: false,
+				hideIconOnBalloonOpen: false,
+				// Должен указать этот тип макета.
+				iconLayout: 'default#imageWithContent',
+				// Ваше изображение значка этикетки.
+				iconImageHref: 'img/icons/mapmark.svg',
+				// Размер метки.
+				iconImageSize: [99, 99],
+				// Смещение верхнего левого уголка значка по сравнению с
+				// Ее "ноги" (точки связывания).
+				iconImageOffset: [0, -56],
+				//Смещение слоя содержимым слоя с изображением.
+				iconContentOffset: [0, 0],
+			});
+			myMap.geoObjects.add(myPlacemark);
+
+			//myMap.behaviors.disable('scrollZoom');
+			//myMap.behaviors.disable('drag');
+		}
+	</script>
 </body>
 
 </html>

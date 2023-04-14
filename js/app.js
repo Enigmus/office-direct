@@ -2922,7 +2922,6 @@
         items.forEach((item => {
             let height = item.clientHeight + 10 === item.scrollHeight ? item.clientHeight + 16 : item.scrollHeight + 16;
             item.setAttribute("style", `--height:${height}px`);
-            console.log(item, item.scrollHeight);
         }));
     }
     window.addEventListener("load", heightBefore);

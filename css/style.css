@@ -11,14 +11,6 @@
 @font-face {
   font-family: Inter;
   font-display: swap;
-  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Inter;
-  font-display: swap;
   src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
@@ -37,6 +29,14 @@
   font-display: swap;
   src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -1550,6 +1550,7 @@ body::after {
 
 .feedback {
   position: relative;
+  z-index: 2;
   margin-top: 189px;
   padding-top: 136px;
   padding-bottom: 147px;
@@ -1673,6 +1674,14 @@ body::after {
 
 .feedback__button {
   padding: 26px 70px 30px;
+}
+
+.map {
+  position: relative;
+  width: 1920px;
+  height: 703px;
+  margin: -250px auto 0;
+  z-index: 1;
 }
 
 .swiper {
